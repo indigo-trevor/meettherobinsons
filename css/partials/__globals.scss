@@ -23,6 +23,15 @@
         top: 20%;
       }
 
+      h4 {
+        margin-top: 15px;
+        color: $white;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 0;
+        }
+
+      }
     }
 
   }
