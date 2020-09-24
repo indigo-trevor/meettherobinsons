@@ -1,0 +1,256 @@
+.section {
+  position: relative;
+  background-color: $lightGrey;
+  overflow: hidden;
+
+  &--hero {
+    height: 100vh;
+    background-image: url(../img/hero2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      height: 100vh;
+    }
+
+    .container {
+      @include vertical-align();
+      top: 18%;
+
+      @include media-breakpoint-down(md) {
+        top: 20%;
+      }
+
+    }
+
+  }
+
+  &--update {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(#fff,0.75);
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 250ms ease;
+    .container {
+      text-align: center;
+      max-width: 800px;
+      h4 {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-bottom: 1em;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      transform: scale(1);
+      transition: all 250ms ease;
+      @include media-breakpoint-down(md) {
+        top: 10px;
+        right: 10px;
+      }
+      svg {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        @include media-breakpoint-down(md) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &.is-dismissed {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+  }
+
+  &--body {
+    padding: 150px 0 0 0;
+    text-align: center;
+    @include media-breakpoint-down(md) {
+      padding: 100px 0 0 0;
+    }
+    .container {
+      max-width: 700px;
+    }
+  }
+
+  &--wedding {
+    padding: 150px 0 0 0;
+    background-image: url(../img/leafs-top-left.png), url(../img/leafs-top-right.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 0%;
+    background-size: 554px 348px, 554px 348px;
+
+    @include media-breakpoint-down(lg) {
+      background-size: 139px 87px, 139px 87px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 100px 0 0 0;
+    }
+  }
+
+  &--travel {
+    background-image: url(../img/leaf-border-left.png), url(../img/leaf-border-right.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 0%;
+    background-size: 256px 676px, 256px 676px;
+    @include media-breakpoint-down(lg) {
+      background-size: 64px 169px, 64px 169px;
+    }
+    .card__inner--clickable {
+      p:last-child {
+        margin-bottom: .5em;
+      }
+    }
+  }
+
+  &--things {
+    background-image: url(../img/leaf-border-left.png), url(../img/leaf-border-right.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 0%;
+    background-size: 256px 676px;
+    @include media-breakpoint-down(lg) {
+      background-size: 64px 169px;
+    }
+  }
+  &--registry {
+    padding-bottom: 200px;
+    background-image: url(../img/leafs-bottom-left.png), url(../img/leafs-bottom-right.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 100%;
+    background-size: 418px 746px;
+    @include media-breakpoint-down(lg) {
+      background-size: 105px 186px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 100px;
+      background-size: 105px 186px;
+    }
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+}
+
+.bg-pom {
+  display: none;
+  img {
+    position: absolute;
+    top: -125px;
+    left: -365px;
+    width: 400px;
+    // height: 290px;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+.bg-pom-flipped {
+  display: none;
+  img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    top: -125px;
+    right: -365px;
+    width: 400px;
+    // height: 290px;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  border: 1px solid $gold;
+  margin-top: 1em;
+  padding: 2em 2em;
+  background-color: $white;
+
+  &__inner {
+    position: relative;
+
+    a {
+      text-decoration: none;
+    }
+
+    &--clickable {
+      margin: 2em 0;
+
+      h4 {
+        color: $black;
+        margin-bottom: 32px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        margin: 0 0;
+      }
+      a {
+        position: relative;
+      }
+      .link-phone {
+        position: relative;
+        margin-top: 1em;
+      }
+
+    }
+
+  }
+
+  &--event {
+
+  }
+
+}
+
+.card-full {
+  margin-top: 3.5em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .bottom-image {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5em;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: $white;
+  padding: 10px 0;
+  line-height: 20px;
+}
