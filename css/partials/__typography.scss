@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Amalfi Coast';
-  src: local('Amalfi Coast'), url('fonts/Amalfi Coast.ttf') format('truetype');
+  font-family: 'Aerotis';
+  src: local('Aerotis'), url('fonts/Aerotis.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -22,21 +22,21 @@ h1, h2, h3, h4, h5 {
     padding: 0;
 }
 h1{
-    font-family: 'Amalfi Coast';
-    font-size: 5.5vw;
+    font-family: 'Aerotis';
+    font-size: 8.5vw;
     color: $white;
+    line-height: 1.2;
     font-weight: 300;
     @include media-breakpoint-down(lg) {
-      font-size: 62px;
-      line-height: 80px;
+      font-size: 11vw;
     }
     @include media-breakpoint-down(md) {
-      font-size: 48px;
-      line-height: 80px;
+      font-size: 11vw;
+      line-height: 2;
     }
 }
 h2{
-    font-family: 'Amalfi Coast';
+    font-family: 'Aerotis';
     font-weight: 300;
     font-size: 42px;
     color: $gold;
@@ -61,10 +61,11 @@ h3{
 h4 {
     font-size: 22px;
     font-family: 'Muli', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0 0;
     @include media-breakpoint-down(md) {
       font-size: 18px;
+      font-weight: 400;
     }
 }
 h5 {
