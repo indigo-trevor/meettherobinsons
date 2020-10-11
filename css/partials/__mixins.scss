@@ -282,6 +282,16 @@
       @content;
     }
   }
+  // Conditional query that identifies if large mobile device in in landscape mode (iPhone plus)
+  @if $name == "mobile-landscape-x" {
+    @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+      @content;
+    }
+  }
   // Conditional query that identifies Windows phone
   @if $name == "mobile-windows-phone" {
     @media screen and (-ms-high-contrast: active) and (max-width: 599px), (-ms-high-contrast: none) and (max-width: 599px) {

@@ -5,10 +5,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'England';
+  src: local('England'), url('fonts/England.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Theloved';
+  src: local('Theloved'), url('fonts/Theloved.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 html,body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $black;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   @include media-breakpoint-down(md) {
     font-size: 15px;
@@ -16,61 +30,70 @@ html,body {
 }
 
 h1, h2, h3, h4, h5 {
-    line-height: 1.3;
+    line-height: 1.5;
     font-style: normal;
     margin: 0;
     padding: 0;
 }
 h1{
-    font-family: 'Aerotis';
-    font-size: 8.5vw;
-    color: $white;
-    line-height: 1.2;
+    //font-family: 'Aerotis';
+   font-family: 'England';
+    //font-family: 'Theloved';
+    font-size: 15vw;
+    line-height: .9;
     font-weight: 300;
+    color: $gold;
     @include media-breakpoint-down(lg) {
-      font-size: 11vw;
+      font-size: 19vw;
     }
     @include media-breakpoint-down(md) {
-      font-size: 11vw;
-      line-height: 2;
+      font-size: 19vw;
+      line-height: 1.4;
     }
 }
 h2{
-    font-family: 'Aerotis';
+    font-family: 'England';
     font-weight: 300;
-    font-size: 42px;
+    font-size: 88px;
+    line-height: 1;
     color: $gold;
     padding: 0 0;
     position: relative;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 .85em 0;
     max-width: 600px;
+    @include media-breakpoint-down(lg) {
+      font-size: 68px;
+    }
     @include media-breakpoint-down(md) {
       max-width: none;
-      font-size: 34px;
+      font-size: 56px;
     }
 }
 h3{
-    font-family: 'Muli', sans-serif;
-    font-weight: 400;
-    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
     margin: 0 0 .5em 0;
     @include media-breakpoint-down(md) {
       font-size: 26px;
     }
 }
 h4 {
-    font-size: 22px;
-    font-family: 'Muli', sans-serif;
-    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     margin: 0 0;
+    color: $gold;
+    margin-bottom: 1em;
+
     @include media-breakpoint-down(md) {
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 22px;
+      font-weight: 300;
     }
 }
 h5 {
-  font-family: 'Muli', sans-serif;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 1em;
 
 }
@@ -82,15 +105,16 @@ label {
 }
 
 a, button {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
-    line-height: 1.35em;
-    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 300;
     cursor: pointer;
 }
 
 p {
   font-size: 1em;
+  line-height: 1.5;
   font-weight: normal;
   margin: .5em 0;
 }

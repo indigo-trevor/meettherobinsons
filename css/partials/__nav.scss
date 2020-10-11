@@ -1,17 +1,17 @@
 .nav-wrapper {
   position: sticky !important;
   top: 0;
-  background-color: rgba($lightGrey, .9);
+  background-color: rgba($light, .9);
   padding: 18px 0;
   width: 100%;
   height: 56px;
   transition: all 250ms ease;
   z-index: 9999;
-  box-shadow: 0 15px 8px -18px $black;
+  box-shadow: 0 15px 8px -18px darken($gold, 60%);
 
   @include media-breakpoint-down(md) {
     padding: 0 0;
-    background-color: rgba($lightGrey, .95);
+    background-color: rgba($light, .95);
   }
 
   #nav {
@@ -128,7 +128,7 @@
         @include media-breakpoint-down(md) {
           display: block;
           top: 55px;
-          background-color: rgba($lightGrey, .95);
+          background-color: rgba($light, .95);
           box-shadow: 0 15px 8px -18px $black;
         }
       }
