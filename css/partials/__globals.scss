@@ -140,29 +140,44 @@
 
   &--wedding {
     padding: 150px 0 0 0;
-    background-image: url(../img/leafs-top-left.png), url(../img/leafs-top-right.png);
+    background-image: url(../img/pampas-top-left.png), url(../img/pampas-top-right.png);
     background-repeat: no-repeat;
-    background-position: 0% 0%, 100% 0%;
-    background-size: 554px 348px, 554px 348px;
+    background-position: -4% -4%, 104% -4%;
+    background-size: 428px 428px, 428px 428px;
+
+    @media all and (min-width: 1084px) and (max-width: 1350px) {
+      background-size: 300px 300px, 300px 300px;
+    }
 
     @include media-breakpoint-down(lg) {
-      background-size: 139px 87px, 139px 87px;
+      background-size: 200px 200px, 200px 200px;
     }
 
     @include media-breakpoint-down(md) {
-      padding: 100px 0 0 0;
+      background-position: -40px -35px, calc(100% + 40px) -35px;
+      background-size: 150px 150px, 150px 150px;
+      padding: 150px 0 0 0;
     }
   }
 
   &--travel {
-    background-image: url(../img/leaf-border-left.png), url(../img/leaf-border-right.png);
+    background-image: url(../img/pampas-mid-left.png), url(../img/pampas-mid-right.png);
     background-repeat: no-repeat;
-    background-position: 0% 0%, 100% 0%;
-    background-size: 256px 676px, 256px 676px;
+    background-position: -6% 0%, 106% 0;
+    background-size: 336px 500px, 336px 500px;
     padding-bottom: 150px;
+    @media all and (min-width: 1084px) and (max-width: 1350px) {
+      background-position: -65px 0, calc(100% + 65px) 0;
+      background-size: 252px 375px, 252px 375px;
+    }
     @include media-breakpoint-down(lg) {
-      background-size: 64px 169px, 64px 169px;
+      background-position: -50px 0, calc(100% + 50px) 0;
+      background-size: 168px 250px, 168px 250px;
       padding-bottom: 100px;
+    }
+    @include media-breakpoint-down(md) {
+      background-position: -50px 20px, calc(100% + 50px) 20px;
+      background-size: 118px 175px, 118px 175px;
     }
     .card__inner--clickable {
       p:last-child {
@@ -174,16 +189,24 @@
   &--registry {
     padding-top: 0;
     padding-bottom: 150px;
-    background-image: url(../img/leafs-bottom-left.png), url(../img/leafs-bottom-right.png);
+    background-image: url(../img/pampas-bottom-left.png), url(../img/pampas-bottom-right.png);
     background-repeat: no-repeat;
-    background-position: 0% 100%, 100% 100%;
-    background-size: 418px 746px;
-    @include media-breakpoint-down(lg) {
-      background-size: 105px 186px;
+    background-position: -4% 104%, 104% 104%;
+    background-size: 428px 428px, 428px 428px;
+
+    @media all and (min-width: 1084px) and (max-width: 1350px) {
+      background-size: 300px 300px, 300px 300px;
     }
+
+    @include media-breakpoint-down(lg) {
+      background-position: -5% 105%, 105% 105%;
+      background-size: 200px 200px, 200px 200px;
+    }
+
     @include media-breakpoint-down(md) {
-      padding-bottom: 100px;
-      background-size: 105px 186px;
+      padding-bottom: 125px;
+      background-size: 150px 150px, 150px 150px;
+      background-position: -40px calc(100% + 50px), calc(100% + 40px) calc(100% + 50px);
     }
   }
 
