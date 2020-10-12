@@ -1,20 +1,6 @@
 @font-face {
-  font-family: 'Aerotis';
-  src: local('Aerotis'), url('fonts/Aerotis.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'England';
   src: local('England'), url('fonts/England.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Theloved';
-  src: local('Theloved'), url('fonts/Theloved.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
@@ -36,9 +22,7 @@ h1, h2, h3, h4, h5 {
     padding: 0;
 }
 h1{
-    //font-family: 'Aerotis';
-   font-family: 'England';
-    //font-family: 'Theloved';
+    font-family: 'England';
     font-size: 15vw;
     line-height: .9;
     font-weight: 300;
@@ -47,8 +31,8 @@ h1{
       font-size: 19vw;
     }
     @include media-breakpoint-down(md) {
-      font-size: 19vw;
-      line-height: 1.4;
+      font-size: 26vw;
+      line-height: 1;
     }
 }
 h2{
