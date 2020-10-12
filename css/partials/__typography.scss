@@ -15,6 +15,16 @@ html,body {
   }
 }
 
+// Custom highlight state
+::selection {
+  background: $gold; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: $gold; /* Gecko Browsers */
+  color: #fff;
+}
+
 h1, h2, h3, h4, h5 {
     line-height: 1.5;
     font-style: normal;
