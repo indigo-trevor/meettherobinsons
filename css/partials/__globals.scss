@@ -45,7 +45,11 @@
       }
 
       h4 {
-        margin-top: 10px;
+        margin-top: 0;
+
+        @include media-breakpoint-down(xxl) {
+          margin-top: 10px;
+        }
 
         @include respond-to(mobile-landscape-x) {
           display: none;
@@ -60,7 +64,7 @@
         }
 
         @include media-breakpoint-down(md) {
-          margin-top: 0;
+          margin-top: 10px;
           font-size: 16px;
         }
 
@@ -187,11 +191,10 @@
   }
 
   &--registry {
-    padding-top: 0;
-    padding-bottom: 150px;
-    background-image: url(../img/pampas-bottom-left.png), url(../img/pampas-bottom-right.png);
+    padding: 100px 0 100px 0;
+    background-image: url(../img/pampas-top-left.png), url(../img/pampas-top-right.png);
     background-repeat: no-repeat;
-    background-position: -4% 104%, 104% 104%;
+    background-position: -4% -4%, 104% -4%;
     background-size: 428px 428px, 428px 428px;
 
     @media all and (min-width: 1084px) and (max-width: 1350px) {
@@ -199,14 +202,18 @@
     }
 
     @include media-breakpoint-down(lg) {
-      background-position: -5% 105%, 105% 105%;
       background-size: 200px 200px, 200px 200px;
+      padding: 115px 0 75px 0;
     }
 
     @include media-breakpoint-down(md) {
-      padding-bottom: 125px;
+      background-position: -35px -30px, calc(100% + 35px) -30px;
       background-size: 150px 150px, 150px 150px;
-      background-position: -40px calc(100% + 50px), calc(100% + 40px) calc(100% + 50px);
+      padding: 115px 0 50px 0;
+    }
+
+    .has-margin-bottom {
+      margin-bottom: .75em;
     }
   }
 
@@ -337,6 +344,9 @@
 
 footer {
   text-align: center;
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(212,167,136,1);
+-moz-box-shadow: 0px -1px 5px 0px rgba(212,167,136,1);
+box-shadow: 0px -1px 5px 0px rgba(212,167,136,1);
   background-color: $light;
   padding: 10px 0;
   line-height: 20px;
